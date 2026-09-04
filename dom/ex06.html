@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+
+    <style>
+
+        body {
+            background-color: darkgray;
+        }
+
+        div#fun {
+            background-color: lightpink;
+            margin: auto;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: larger;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="fun" onclick="clicar()" onmouseenter="hover()" onmouseout="out()">
+        Interaja e se divirta!
+    </div>
+
+    <script>
+
+        var fun = window.document.getElementById('fun')
+        fun.addEventListener('click', clicar)
+        fun.addEventListener('mouseenter', hover)
+        fun.addEventListener('mouseout', out)
+
+        function clicar() {
+            fun.innerText = 'Uhh, Curtiu?'
+            fun.style.backgroundColor = 'pink'
+        }
+
+        function hover() {
+            fun.innerText = 'Você entrou!'
+        }
+
+        function out() {
+            fun.innerText = 'Você saiu :('
+            fun.style.backgroundColor = 'lightpink'
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+
+        body {
+            background-color: lightsteelblue;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Eu tenho o Dom haha</h1>
+    <p>Eu nasci com o Dom</p>
+    <p>Rei do <strong>JavaScript</strong></p>
+    <div id="div-click">Clique aqui (Dom)</div>
+
+    <script>
+
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var body = window.document.body
+        var divClick = window.document.getElementById('div-click')
+        var p = window.document.querySelector('p')
+
+        window.document.writeln("<p>Escrevi esse parágrafo com o DOM do JS</p>")
+
+        window.document.writeln(`Primeiro parágrafo: ${p1.innerHTML}`)
+
+        p.style.color = 'darkblue'
+        body.style.backgroundColor = 'lightblue'
+        divClick.style.border = '1px solid black'
+        divClick.innerText = 'Div alterada com DOM JS'
+
+    </script>
+
+</body>
+</html>
