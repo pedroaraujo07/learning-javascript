@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flamenguista?</title>
+</head>
+<body>
+    <h1>Verificador de Flamenguista</h1>
+    <p>Digite seu time no Brasil: <input type="text" name="time" id="time"></p>
+    <p><input type="button" value="Verificar" onclick="verificaFlamengo()"></p>
+    <p id="resultado"></p>
+
+    <script>
+
+        function verificaFlamengo() {
+            var time = window.document.getElementById('time').value
+            var resultado = window.document.querySelector('#resultado')
+
+            if (time == 'Flamengo') {
+                resultado.innerHTML = 'Você é Flamenguista!'
+            } else {
+                resultado.innerHTML = 'Você não torce para o melhor time do Brasil.'
+            }
+        }   
+
+    </script>
+
+</body>
+</html>

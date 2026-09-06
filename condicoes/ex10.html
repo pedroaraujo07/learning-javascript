@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFB</title>
+</head>
+<body>
+    <h1>Sistema de Lutas</h1>
+    <p>Peso do lutador: <input type="number" name="peso" id="peso"> kg.</p>
+    <p><input type="button" value="Verificar Categoria" onclick="calculaCategoria()"></p>
+    <div id>
+        <p id="resultado">Categoria de peso: </p>
+    </div>
+
+    <script>
+
+        function calculaCategoria() {
+            var stringPeso = window.document.getElementById('peso')
+            var peso = Number(stringPeso.value)
+            var resultado = window.document.getElementById('resultado')
+            if (peso <= 56.7) {
+                resultado.innerHTML += 'Peso Mosca'
+            } else if (peso <= 61.2) {
+                resultado.innerHTML += 'Peso Galo'
+            } else if (peso <= 65.8) {
+                resultado.innerHTML += 'Peso Pena'
+            } else if (peso <= 70.3) {
+                resultado.innerHTML += 'Peso Leve'
+            } else if (peso <= 77.1) {
+                resultado.innerHTML += 'Peso Meio-Médio'
+            } else if (peso <= 83.9) {
+                resultado.innerHTML += 'Peso Médio'
+            } else if (peso <= 93) {
+                resultado.innerHTML += 'Peso Meio-Pesado'
+            } else if (peso <= 120) {
+                resultado.innerHTML += 'Peso Pesado'
+            } else {
+                resultado.innerHTML += 'Peso acima do limite do UFB'
+            }
+        }
+
+        
+
+    </script>
+
+</body>
+</html>
