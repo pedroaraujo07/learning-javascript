@@ -15,7 +15,7 @@ function verificar() {
     var idade = anoAtual - ano
 
 
-    if (ano <= 2026 && ano >= 1900 && masc.checked || fem.checked) {
+    if (ano <= 2026 && ano >= 1900 && (masc.checked || fem.checked)) {
         divAviso.style.display = 'none'
         divPessoa.style.display = 'flex'
         spanIdade.innerHTML = idade
@@ -24,8 +24,11 @@ function verificar() {
     }
 
 
+    if (idade < 0) {
 
-    if (idade <= 2 && masc.checked ) {
+    }
+
+    else if (idade <= 2 && masc.checked) {
         divImagem.style.backgroundImage = 'url(imgs/homem-bebe.jpg)'
         spanSexo.innerHTML = 'um homem'
     }
@@ -60,13 +63,13 @@ function verificar() {
         spanSexo.innerHTML = 'um homem'
     }
  
-    else if (masc.checked ) {
+    else if (masc.checked && idade <= 126) {
         divImagem.style.backgroundImage = 'url(imgs/homem-idoso.jpg)'
         spanSexo.innerHTML = 'um homem'
     }
 
     
-    else if (idade <= 2 && fem.checked ) {
+    else if (idade <= 2 && fem.checked) {
         divImagem.style.backgroundImage = 'url(imgs/mulher-bebe.jpg)'
         spanSexo.innerHTML = 'uma mulher'
     }
@@ -101,7 +104,7 @@ function verificar() {
         spanSexo.innerHTML = 'uma mulher'
     }
  
-    else if (fem.checked ) {
+    else if (fem.checked && idade <= 126) {
         divImagem.style.backgroundImage = 'url(imgs/mulher-idosa.jpg)'
         spanSexo.innerHTML = 'uma mulher'
     }
