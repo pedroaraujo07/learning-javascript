@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <main>
+        <div id="container">
+
+            <div id="dados">
+                <p>Ano de Nascimento: <input type="number" name="ano" id="ano" required></p>
+                <p>Sexo: 
+                    <input type="radio" name="sexo" id="masculino">
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" name="sexo" id="feminino">
+                    <label for="feminino">Feminino</label>
+                </p>
+                <p><input type="button" value="Verificar" id="botao" onclick="verificar()"></p>
+            </div>
+
+            <div id="aviso">
+                <p>Por favor, preencha os dados acima!</p>
+            </div>
+
+            <div id="pessoa">
+                <p>Detectamos <span id="sexo">um homem</span> com <span id="idade">18</span> anos.</p>
+                <div id="imagem"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p id="credito">&copy; 2026 Pedro Araújo</p>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
