@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    
+
+    <script>
+
+        const user = prompt("User:")
+
+        if (user === 'Admin') {
+
+            const password = prompt('Senha')
+
+            if (password === 'oMestre') {
+                alert('Bem-Vindo(a)!')
+            } 
+
+            else if (password === '' || password == null) {
+                alert('Login cancelado.')
+            }
+
+            else {
+                alert('Senha incorreta.')
+            }
+        }
+
+        else if (user === '' || user === null) {
+            alert('Login cancelado.')
+        }
+
+        else {
+            alert('Usuário não reconhecido.')
+        }
+
+    </script>
+</body>
+</html>
