@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let num = prompt('Digite um número')
+        alert(`Números primos até ${num}: `)
+        proximo:
+        for (let nprimo = 2; nprimo <= num; nprimo++) {
+            for (let divisor = 2; divisor < nprimo; divisor++ ) {
+                if (nprimo % divisor == 0) continue proximo
+            }
+            alert(nprimo)
+        }
+        
+        
+    </script>
+</body>
+</html>
